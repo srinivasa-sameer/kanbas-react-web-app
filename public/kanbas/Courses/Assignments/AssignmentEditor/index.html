@@ -37,86 +37,103 @@
         <li><a href="/Kanbas/Courses/Settings">Settings</a></li>
       </ul>
     </td>
-    <td valign="top" style="padding-left: 100px">
-      <h3>Assignment Name</h3>
-      <input
-        type="text"
-        value="Assignment 1 - HTML"
-        id="assignmentName"
-        placeholder="Assignment Name"
-      />
-      <h3>Description</h3>
-      <textarea cols="100" rows="5">
+    <form action="../index.html">
+      <td valign="top" style="padding-left: 100px">
+        <h3>Assignment Name</h3>
+        <input
+          type="text"
+          value="Assignment 1 - ENV + HTML"
+          id="assignmentName"
+          placeholder="Assignment Name"
+          size="30"
+        />
+        <h3>Description</h3>
+        <textarea cols="100" rows="5">
           This is the first assignment to build Kanbas
           </textarea
-      >
+        >
 
-      <h3>Points</h3>
-      <input value="100" type="number" max="100" min="50" step="5" />
+        <h3>Points</h3>
+        <input value="100" type="number" max="100" min="50" step="5" />
 
-      <h3>Assignment Group</h3>
-      <select>
-        <option>Assignments</option>
-        <option>Quizzes</option>
-        <option>Exams</option>
-        <option>Project</option>
-      </select>
+        <h3>Assignment Group</h3>
+        <select>
+          <option>Assignments</option>
+          <option>Quizzes</option>
+          <option>Exams</option>
+          <option>Project</option>
+        </select>
 
-      <h3>Display Grade As</h3>
-      <select>
-        <option>Percentage</option>
-        <option>Marks</option>
-        <option>GPA</option>
-      </select>
+        <h3>Display Grade As</h3>
+        <select>
+          <option>Percentage</option>
+          <option>Marks</option>
+          <option>GPA</option>
+        </select>
 
-      <h3>Submission Type</h3>
-      <select>
-        <option>Online</option>
-        <option>Offline</option>
-      </select>
-      <br />
-      <br />
-      <label for="onlineEntry">Online Entry Options </label><br /><br />
-      <input type="checkbox" id="textEntry" />
-      <label for="textEntry">Text Entry</label><br />
-      <input type="checkbox" checked /> Website URL <br />
+        <h3>Submission Type</h3>
+        <select>
+          <option>Online</option>
+          <option>Offline</option>
+        </select>
+        <br />
+        <br />
+        <label for="onlineEntry">Online Entry Options </label><br /><br />
+        <input type="checkbox" id="textEntry" />
+        <label for="textEntry">Text Entry</label><br />
+        <input type="checkbox" checked /> Website URL <br />
+        <input type="checkbox" /> Media Recordings <br />
+        <input type="checkbox" /> Student Annotation <br />
+        <input type="checkbox" /> File Uploads <br />
 
-      <h3>Submission Attempts</h3>
-      <select>
-        <option>Unlimited</option>
-        <option>Limited</option>
-        <option>None</option>
-      </select>
+        <h3>Submission Attempts</h3>
+        <select>
+          <option>Unlimited</option>
+          <option>Limited</option>
+          <option>None</option>
+        </select>
 
-      <h3>Plaigarism Review</h3>
-      <select>
-        <option>None</option>
-        <option>Yes</option>
-        <option>Done</option>
-      </select>
+        <h3>Plaigarism Review</h3>
+        <select>
+          <option>None</option>
+          <option>Yes</option>
+          <option>Done</option>
+        </select>
 
-      <h3>Group Assignment</h3>
-      <input type="checkbox" />This is a group assignment
+        <h3>Group Assignment</h3>
+        <input type="checkbox" />This is a group assignment
 
-      <h3>Peer Reviews</h3>
-      <input type="checkbox" />Require Peer Reviews
+        <h3>Peer Reviews</h3>
+        <input type="checkbox" />Require Peer Reviews
 
-      <h3>Assign</h3>
-      <label>Assign To</label><br />
-      <input type="text" value="Everyone" />
+        <h3>Assign</h3>
+        <label>Assign To</label><br />
+        <input type="text" value="Everyone" />
 
-      <h3>Due</h3>
-      <input type="date" value="2023-09-18" min="2023-09-15" max="2023-12-31" />
+        <h3>Due</h3>
+        <input
+          type="date"
+          value="2023-09-18"
+          min="2023-09-15"
+          max="2023-12-31"
+        />
 
-      <h3>Available From</h3>
-      <input type="date" value="2023-09-06" min="2023-09-04" max="2023-12-31" />
+        <h3>Available From</h3>
+        <input
+          type="date"
+          value="2023-09-06"
+          min="2023-09-04"
+          max="2023-12-31"
+        />
 
-      <h3>Until</h3>
-      <input type="date" value="2023-09-18" max="2023-09-31" />
-      <br />
-      <br />
-      <button>Cancel</button>
-      <button>Save</button>
-    </td>
+        <h3>Until</h3>
+        <input type="date" value="2023-09-18" max="2023-09-31" />
+        <br />
+        <br />
+        <button>Cancel</button>
+        <button>Save</button>
+      </td>
+    </form>
   </tr>
 </table>
+<br />
