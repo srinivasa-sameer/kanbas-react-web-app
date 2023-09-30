@@ -1,0 +1,16 @@
+.main-content-control .btn {
+  margin-left: 4px;
+}
+
+.status-list li {
+  margin-bottom: 5px;
+  background: #eeeeee;
+}
+
+.status-list i {
+  margin-right: 5px;
+}
+
+.module-list > .list-group {
+  border-left: 4px solid green;
+}
