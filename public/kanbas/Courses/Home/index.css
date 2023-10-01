@@ -11,6 +11,34 @@
   margin-right: 5px;
 }
 
+.module-list {
+  border-radius: 0;
+  width: 100%;
+}
+
 .module-list > .list-group {
   border-left: 4px solid green;
+}
+
+.breadcrumb {
+  margin-left: 20px;
+  margin-top: 15px;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.fa-bars {
+  margin-right: 10px;
+}
+
+.fa-glasses {
+  margin-right: 3px;
+}
+
+.fa-circle-check,
+.fa-link {
+  color: rgb(3, 133, 3);
+  margin-right: 3px;
 }

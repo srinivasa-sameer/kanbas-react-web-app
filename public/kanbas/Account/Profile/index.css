@@ -43,3 +43,12 @@
   margin-left: 600px;
   margin-right: 0;
 }
+
+.fa-pencil {
+  transform: rotate(270deg);
+  margin-right: 5px;
+}
+
+a:link {
+  text-decoration: none !important;
+}
