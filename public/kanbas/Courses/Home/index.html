@@ -31,7 +31,7 @@
 ></script>
 
 <div class="wd-flex-row-container">
-  <div class="kanbasNav">
+  <div class="kanbasNav d-none d-md-block">
     <ul class="wd-kanbas-navigation">
       <div class="wd-logo-container">
         <a href="#"><img src="../../../images/NULogo.png" class="wd-logo" /></a>
@@ -93,18 +93,26 @@
       <nav style="--bs-breadcrumb-divider: '>'" class="wd-breadcrumb">
         <ol class="breadcrumb" style="margin-left: 20px; margin-top: 15px">
           <li class="breadcrumb-item">
+            <i
+              class="fa fa-bars"
+              style="color: #b52828; margin-right: 10px"
+            ></i>
             <a href="#" style="color: #b52828; text-decoration: none"
               >CS 5610.12631.202410</a
             >
           </li>
           <li class="breadcrumb-item active" aria-current="page">Home</li>
+          <button class="btn" style="background: #eeeeee; margin-left: 1100px">
+            <i class="fa-solid fa-glasses" style="margin-right: 3px"></i>Student
+            View
+          </button>
         </ol>
       </nav>
       <hr style="margin-left: 20px; margin-right: 20px" />
     </div>
     <div class="wd-flex-row-container">
       <div class="d-flex courseNav">
-        <ul class="wd-course-navigation">
+        <ul class="wd-course-navigation d-none d-md-block">
           <li class="wd-active"><a href="/Kanbas/Courses/Home">Home</a></li>
           <li><a href="/Kanbas/Courses/Modules">Modules</a></li>
           <li><a href="#">Piazza</a></li>
@@ -166,8 +174,8 @@
         <br />
         <hr />
         <ul
-          class="wd-flex-grow-1 list-group module-list"
-          style="border-radius: 0"
+          class="list-group module-list"
+          style="border-radius: 0; width: 100%"
         >
           <li class="list-group-item list-group-item-secondary">
             <i class="fa fa-grip-vertical" style="margin-right: 5px"></i>
