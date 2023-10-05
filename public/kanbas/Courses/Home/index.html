@@ -37,13 +37,269 @@
         <i
           class="fa fa-bars"
           style="color: #ffffff; margin-left: 10px; margin-top: 12px"
+          data-toggle="modal"
+          data-target="#kanbasModal"
         ></i>
+        <div
+          class="modal fade"
+          id="kanbasModal"
+          tabindex="-1"
+          role="dialog"
+          aria-labelledby="myModalLabel"
+        >
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header" style="flex-direction: row-reverse">
+                <button
+                  type="button"
+                  class="btn close"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                  style="background: #ffffff"
+                >
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="wd-kanbas-navigation1">
+                  <div class="modal-margin">
+                    <a href="/Kanbas/Account/Profile">
+                      <i
+                        class="fa-solid fa-user-circle"
+                        style="color: #b52828"
+                      ></i>
+                      <span style="color: #b52828">Account</span>
+                    </a>
+                  </div>
+                  <div class="modal-margin">
+                    <a href="/Kanbas/Dashboard">
+                      <i class="fa-solid fa-gauge" style="color: #b52828"></i>
+                      <span style="color: #b52828">Dashboard</span></a
+                    >
+                  </div>
+                  <div class="modal-margin">
+                    <a href="/Kanbas/Courses/Home">
+                      <i class="fa-solid fa-book" style="color: #b52828"></i>
+                      <span style="color: #b52828">Courses</span></a
+                    >
+                  </div>
+                  <div class="modal-margin">
+                    <a href="/Kanbas/Calendar">
+                      <i
+                        class="fa-solid fa-calendar-days"
+                        style="color: #b52828"
+                      ></i>
+                      <span style="color: #b52828">Calendar</span>
+                    </a>
+                  </div>
+                  <div class="modal-margin">
+                    <a href="/Kanbas/Inbox">
+                      <i class="fa-solid fa-inbox" style="color: #b52828"></i>
+                      <span style="color: #b52828">Inbox</span>
+                    </a>
+                  </div>
+
+                  <div class="modal-margin">
+                    <a href="/Kanbas/History">
+                      <i class="fa-solid fa-clock" style="color: #b52828"></i>
+                      <span style="color: #b52828">History</span>
+                    </a>
+                  </div>
+                  <div class="modal-margin">
+                    <a href="/Kanbas/Studio">
+                      <i
+                        class="fa-brands fa-youtube"
+                        style="color: #b52828"
+                      ></i>
+                      <span style="color: #b52828">Studio</span>
+                    </a>
+                  </div>
+                  <div class="modal-margin">
+                    <a href="/Kanbas/Commons">
+                      <i
+                        class="fa-solid fa-arrow-right-from-bracket"
+                        style="color: #b52828"
+                      ></i>
+                      <span style="color: #b52828">Commons</span>
+                    </a>
+                  </div>
+                  <div class="modal-margin">
+                    <a href="/Kanbas/Help">
+                      <i
+                        class="fa-solid fa-circle-question"
+                        style="color: #b52828"
+                      ></i>
+                      <span style="color: #b52828">Help</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <p style="color: white; margin-left: 25%; margin-top: 8px">
           CS 5610.12631.202410
         </p>
         <div class="float-end" style="margin-left: 22%">
           <i class="fa fa-glasses" style="color: white; margin-top: 12px"></i>
-          <i class="fa fa-chevron-down" style="color: white"></i>
+          <i
+            class="fa fa-chevron-down"
+            style="color: white"
+            data-toggle="modal"
+            data-target="#courseNavigation"
+          ></i>
+          <div
+            class="modal modal-fullscreen-sm-down"
+            id="courseNavigation"
+            tabindex="-1"
+            aria-labelledby="myModalLabel"
+            style="width: 100%"
+          >
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header" style="flex-direction: row-reverse">
+                  <button
+                    type="button"
+                    class="btn close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                    style="background: #ffffff"
+                  >
+                    <i class="fas fa-times"></i>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div class="wd-course-navigation1">
+                    <div class="course-modal">
+                      <i class="fa-solid fa-house" style="color: #b52828"></i>
+                      <a
+                        style="color: #b52828"
+                        href="/Kanbas/Courses/Home/home.html"
+                        >Home</a
+                      >
+                    </div>
+                    <div class="course-modal">
+                      <i
+                        class="fa-solid fa-crosshairs"
+                        style="color: #b52828"
+                      ></i>
+                      <a
+                        style="color: #b52828"
+                        href="/Kanbas/Courses/Modules/index.html"
+                        >Modules</a
+                      >
+                    </div>
+                    <div class="course-modal">
+                      <i class="fa-solid fa-plug" style="color: #b52828"></i>
+                      <a style="color: #b52828" href="#">Piazza</a>
+                    </div>
+                    <div class="course-modal">
+                      <i class="fa-solid fa-plug" style="color: #b52828"></i>
+                      <a style="color: #b52828" href="#">Zoom Meetings</a>
+                    </div>
+                    <div class="course-modal">
+                      <i class="fa-solid fa-book" style="color: #b52828"></i>
+                      <a
+                        style="color: #b52828"
+                        href="/Kanbas/Courses/Assignments/index.html"
+                        >Assignments</a
+                      >
+                    </div>
+                    <div class="course-modal">
+                      <i class="fa-solid fa-rocket" style="color: #b52828"></i>
+                      <a style="color: #b52828" href="#">Quizzes</a>
+                    </div>
+                    <div class="course-modal">
+                      <i class="fa-solid fa-book" style="color: #b52828"></i>
+                      <a
+                        style="color: #b52828"
+                        href="/Kanbas/Courses/Grades/grades.html"
+                        >Grades</a
+                      >
+                    </div>
+                    <div class="course-modal">
+                      <i
+                        class="fa-solid fa-user-group"
+                        style="color: #b52828"
+                      ></i>
+                      <a style="color: #b52828" href="#">People</a>
+                    </div>
+                    <div class="course-modal">
+                      <i class="fa-solid fa-plug" style="color: #b52828"></i>
+                      <a style="color: #b52828" href="#">Panopto Video</a>
+                    </div>
+                    <div class="course-modal">
+                      <i
+                        class="fa-solid fa-comments"
+                        style="color: #b52828"
+                      ></i>
+                      <a style="color: #b52828" href="#">Discussions</a>
+                    </div>
+                    <div class="course-modal">
+                      <i
+                        class="fa-solid fa-bullhorn"
+                        style="color: #b52828"
+                      ></i>
+                      <a style="color: #b52828" href="#">Announcements</a>
+                    </div>
+                    <div class="course-modal">
+                      <i
+                        class="fa-regular fa-file-lines"
+                        style="color: #b52828"
+                      ></i>
+                      <a style="color: #b52828" href="#">Pages</a>
+                    </div>
+                    <div class="course-modal">
+                      <i
+                        class="fa-regular fa-folder"
+                        style="color: #b52828"
+                      ></i>
+                      <a style="color: #b52828" href="#">Files</a>
+                    </div>
+                    <div class="course-modal">
+                      <i
+                        class="fa-solid fa-clipboard-list"
+                        style="color: #b52828"
+                      ></i>
+                      <a style="color: #b52828" href="#">Rubrics</a>
+                    </div>
+                    <div class="course-modal">
+                      <i
+                        class="fa-solid fa-bullseye"
+                        style="color: #b52828"
+                      ></i>
+                      <a style="color: #b52828" href="#">Outcomes</a>
+                    </div>
+                    <div class="course-modal">
+                      <i
+                        class="fa-regular fa-circle"
+                        style="color: #b52828"
+                      ></i>
+                      <a style="color: #b52828" href="#">Collaborations</a>
+                    </div>
+                    <div class="course-modal">
+                      <i class="fa-solid fa-book" style="color: #b52828"></i>
+                      <a style="color: #b52828" href="#">Syllabus</a>
+                    </div>
+                    <div class="course-modal">
+                      <i class="fa-solid fa-plug" style="color: #b52828"></i>
+                      <a style="color: #b52828" href="#"
+                        >Progress Reports (EAB Navigate)</a
+                      >
+                    </div>
+                    <div class="course-modal">
+                      <i class="fa-solid fa-gear" style="color: #b52828"></i>
+                      <a
+                        style="color: #b52828"
+                        href="/Kanbas/Courses/Settings/index.html"
+                        >Settings</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
