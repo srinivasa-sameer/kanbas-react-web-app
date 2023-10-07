@@ -1,11 +1,16 @@
 import './App.css';
+import Labs from './Labs';
+import HelloWorld from './Labs/a3/HelloWorld';
+import Kanbas from './Kanbas/index.js';
 
-function App() {
+const App = () => {
   return (
     <div className="App">
-      <h1>Web Development - CS 5610</h1>
+      <HelloWorld />
+      <Labs />
+      <Kanbas />
     </div>
   );
-}
+};
 
 export default App;
