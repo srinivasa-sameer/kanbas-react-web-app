@@ -47,7 +47,7 @@ const KanbasNavigation = () => {
         </Link>
       </li>
       <li>
-        <Link to="/Kanbas/Courses/Home" className={styles.kanbas__navLink}>
+        <Link to="/Kanbas/Courses" className={styles.kanbas__navLink}>
           <FaBook className={styles.icon} />
           Courses
         </Link>

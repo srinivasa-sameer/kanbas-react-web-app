@@ -9,10 +9,10 @@ const CourseNavigation = () => {
     <div>
       <ul className={`d-none d-md-block ${styles.wd_course_navigation}`}>
         <li className="wd_active">
-          <a href="/Kanbas/Courses/Home">Home</a>
+          <Link to="/Kanbas/Courses">Home</Link>
         </li>
         <li>
-          <a href="/Kanbas/Courses/Modules">Modules</a>
+          <Link to="/Kanbas/Courses/Modules">Modules</Link>
         </li>
         <li>
           <a href="#">Piazza</a>
@@ -21,13 +21,13 @@ const CourseNavigation = () => {
           <a href="#">Zoom Meetings</a>
         </li>
         <li>
-          <a href="/Kanbas/Courses/Assignments">Assignments</a>
+          <Link to="/Kanbas/Courses/Assignments">Assignments</Link>
         </li>
         <li>
           <a href="#">Quizzes</a>
         </li>
         <li>
-          <a href="/Kanbas/Courses/Grades">Grades</a>
+          <Link to="/Kanbas/Courses/Grades">Grades</Link>
         </li>
         <li>
           <a href="#">People</a>
@@ -60,7 +60,7 @@ const CourseNavigation = () => {
           <a href="#">Syllabus</a>
         </li>
         <li>
-          <a href="/Kanbas/Courses/Settings">Settings</a>
+          <Link to="/Kanbas/Courses/Settings">Settings</Link>
         </li>
       </ul>
     </div>

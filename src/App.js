@@ -12,6 +12,9 @@ import History from './Kanbas/History';
 import Inbox from './Kanbas/Inbox';
 import Studio from './Kanbas/Studio';
 import CoursesHome from './Kanbas/Courses/CoursesHome';
+import CoursesModules from './Kanbas/Courses/CoursesModules';
+import CoursesAssignments from './Kanbas/Courses/CoursesAssignments';
+import CourseAssignmentEditor from './Kanbas/Courses/CoursesAssignments/CourseAssignmentEditor';
 
 function App() {
   return (
@@ -26,6 +29,15 @@ function App() {
           <Route path="Kanbas/Calendar" element={<Calendar />} />
           <Route path="Kanbas/Commons" element={<Commons />} />
           <Route path="Kanbas/Courses/" element={<CoursesHome />} />
+          <Route path="Kanbas/Courses/Modules" element={<CoursesModules />} />
+          <Route
+            path="Kanbas/Courses/Assignments"
+            element={<CoursesAssignments />}
+          />
+          <Route
+            path="Kanbas/Courses/Assignments/AssignmentEditor"
+            element={<CourseAssignmentEditor />}
+          />
           <Route path="Kanbas/Help" element={<Help />} />
           <Route path="Kanbas/Dashboard" element={<Dashboard />} />
           <Route path="Kanbas/History" element={<History />} />

@@ -1,4 +1,4 @@
-const CourseHomeContent = () => {
+const CourseModuleContent = () => {
   return (
     <div
       class="flex-grow-1"
@@ -409,4 +409,4 @@ const CourseHomeContent = () => {
   );
 };
 
-export default CourseHomeContent;
+export default CourseModuleContent;

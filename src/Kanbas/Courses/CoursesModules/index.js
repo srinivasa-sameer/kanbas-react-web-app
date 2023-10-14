@@ -1,11 +1,10 @@
 import KanbasNavigation from '../../KanbasNavigation';
 import CourseNavigation from '../CourseNavigation';
 import styles from '../../../index.css';
-import CourseTopNavBar from './CourseTopNavBar';
-import CourseStatusSection from './CourseStatusSection';
-import CourseHomeContent from './CourseHomeContent';
+import CourseTopNavBar from '../CoursesHome/CourseTopNavBar';
+import CourseModuleContent from '../CoursesModules/CourseModuleContent';
 
-const CoursesHome = () => {
+const CoursesModules = () => {
   return (
     <div className="d-flex flex-row">
       <KanbasNavigation />
@@ -14,8 +13,7 @@ const CoursesHome = () => {
         <div className={styles.wd_flex_row_container}>
           <div className="d-flex">
             <CourseNavigation />
-            <CourseHomeContent />
-            <CourseStatusSection />
+            <CourseModuleContent />
           </div>
         </div>
       </div>
@@ -23,4 +21,4 @@ const CoursesHome = () => {
   );
 };
 
-export default CoursesHome;
+export default CoursesModules;
