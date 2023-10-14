@@ -5,16 +5,12 @@
   width: 100%;
 }
 
-.card-container {
+.cardContainer {
   margin-top: 30px;
 }
 .card {
   width: 270px;
   margin-bottom: 40px;
-}
-
-.card i {
-  color: grey;
 }
 
 .card img {
@@ -35,4 +31,8 @@ h1 {
 
 h2 {
   font-weight: 200;
+}
+
+.dummy {
+  background-color: aqua;
 }

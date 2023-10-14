@@ -6,12 +6,12 @@ import KanbasNavigation from './Kanbas/KanbasNavigation';
 import Profile from './Kanbas/Account/Profile';
 import Calendar from './Kanbas/Calendar';
 import Commons from './Kanbas/Commons';
-import Courses from './Kanbas/Courses';
 import Help from './Kanbas/Help';
 import Dashboard from './Kanbas/Dashboard';
 import History from './Kanbas/History';
 import Inbox from './Kanbas/Inbox';
 import Studio from './Kanbas/Studio';
+import CoursesHome from './Kanbas/Courses/CoursesHome';
 
 function App() {
   return (
@@ -25,7 +25,7 @@ function App() {
           <Route path="Kanbas/Account/*" element={<Profile />} />
           <Route path="Kanbas/Calendar" element={<Calendar />} />
           <Route path="Kanbas/Commons" element={<Commons />} />
-          <Route path="Kanbas/Courses" element={<Courses />} />
+          <Route path="Kanbas/Courses/" element={<CoursesHome />} />
           <Route path="Kanbas/Help" element={<Help />} />
           <Route path="Kanbas/Dashboard" element={<Dashboard />} />
           <Route path="Kanbas/History" element={<History />} />
