@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import styles from './index.module.css';
 import { FaUser, FaBook, FaInbox, FaClock } from 'react-icons/fa';
 import {
@@ -11,9 +11,13 @@ import {
 
 const KanbasNavigation = () => {
   const links = [
-    { name: 'Account', url: '/Kanbas/Account/Profile/' },
-    { name: 'Dashboard', url: '/Kanbas/Dashboard/' },
+    '/Kanbas/Account/Profile/',
+    '/Kanbas/Dashboard',
+    '/Kanbas/Courses',
   ];
+
+  const { pathname } = useLocation();
+
   return (
     <ul className={styles.wd_kanbas_navigation}>
       <div className={styles.wd_logo_container}>
@@ -25,25 +29,16 @@ const KanbasNavigation = () => {
           />
         </a>
       </div>
-      {/* {links.length > 0 &&
-          links.map((ele) => (
-            <li>
-              <Link to={ele?.url} className={styles.kanbas__navLink}>
-                <FaUser className={styles.icon} style={{ color: 'white' }} />
-                {ele?.name}
-              </Link>
-            </li>
-          ))} */}
       <li>
         <Link to="/Kanbas/Account/Profile/" className={styles.kanbas__navLink}>
           <FaUser className={styles.icon} style={{ color: 'white' }} />
           Account
         </Link>
       </li>
-      <li>
-        <Link to="/Kanbas/Dashboard" className={styles.kanbas__navLink}>
+      <li className={`${pathname.includes(links) && 'active'}`}>
+        <Link to="/Kanbas/Dashboard" className={`${styles.kanbas__navLink}`}>
           <FaGauge className={styles.icon} />
-          Dashboard
+          <span>Dashboard</span>
         </Link>
       </li>
       <li>

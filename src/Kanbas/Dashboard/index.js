@@ -3,6 +3,7 @@ import db from '../Database';
 import KanbasNavigation from '../KanbasNavigation';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { FaFilePen } from 'react-icons/fa6';
 
 function Dashboard() {
   const courses = db.courses;
@@ -16,7 +17,7 @@ function Dashboard() {
         <hr />
 
         <div className="container" style={{ marginLeft: '30px' }}>
-          <h2>Published Courses (3)</h2>
+          <h2>Published Courses ({`${courses.length}`})</h2>
           <hr />
 
           <div
@@ -26,9 +27,21 @@ function Dashboard() {
               <Card style={{ width: '270px' }} key={course._id}>
                 <Card.Img variant="top" src={`${course.image}`} />
                 <Card.Body>
-                  <Card.Title>{course.name}</Card.Title>
-                  <Card.Text>{course.number}</Card.Text>
-                  <Button variant="primary">{course.number}</Button>
+                  <Card.Text
+                    style={{
+                      textOverflow: 'ellipsis',
+                      overflow: 'hidden',
+                      whiteSpace: 'nowrap',
+                    }}
+                  >
+                    {course.name}
+                  </Card.Text>
+                  <Card.Text>{course.description}</Card.Text>
+                  <Button style={{ background: 'white', border: 'white' }}>
+                    <FaFilePen
+                      style={{ color: 'grey', fontSize: '20px' }}
+                    ></FaFilePen>
+                  </Button>
                 </Card.Body>
               </Card>
             ))}
