@@ -16,10 +16,7 @@ import styles from './index.module.css';
 
 const CourseStatusSection = () => {
   return (
-    <div
-      class="status-content d-none d-lg-block"
-      style={{ marginLeft: '20px', marginRight: '20px' }}
-    >
+    <div class="status-content d-none d-lg-block" style={{ margin: '20px' }}>
       <h5>Course Status</h5>
 
       <button class="btn" style={{ background: '#eeeeee' }}>
@@ -38,25 +35,32 @@ const CourseStatusSection = () => {
       </button>
       <ul class="list-group status-list" style={{ marginTop: '10px' }}>
         <li class="list-group-item">
-          <FaFileImport></FaFileImport>Import Existing Content
+          <FaFileImport style={{ marginRight: '8px' }} />
+          Import Existing Content
         </li>
         <li class="list-group-item">
-          <FaCloudArrowUp></FaCloudArrowUp>Import from Commons
+          <FaCloudArrowUp style={{ marginRight: '8px' }} />
+          Import from Commons
         </li>
         <li class="list-group-item">
-          <FaCrosshairs></FaCrosshairs>Choose Home Page
+          <FaCrosshairs style={{ marginRight: '8px' }} />
+          Choose Home Page
         </li>
         <li class="list-group-item">
-          <FaSquarePollVertical></FaSquarePollVertical>View Course Stream
+          <FaSquarePollVertical style={{ marginRight: '8px' }} />
+          View Course Stream
         </li>
         <li class="list-group-item">
-          <FaBullhorn></FaBullhorn>New Announcement
+          <FaBullhorn style={{ marginRight: '8px' }} />
+          New Announcement
         </li>
         <li class="list-group-item">
-          <FaSquarePollVertical></FaSquarePollVertical>New Analytics
+          <FaSquarePollVertical style={{ marginRight: '8px' }} />
+          New Analytics
         </li>
         <li class="list-group-item">
-          <FaBell></FaBell>View Course Notifications
+          <FaBell style={{ marginRight: '8px' }} />
+          View Course Notifications
         </li>
       </ul>
       <br />
@@ -69,6 +73,8 @@ const CourseStatusSection = () => {
             color: '#b52828',
             marginRight: '15px',
             marginBottom: '30px',
+            height: '25px',
+            width: '30px',
           }}
         ></FaCircleMinus>
         <div class="text">
@@ -86,7 +92,7 @@ const CourseStatusSection = () => {
         <h5>
           Coming Up
           <div class="float-end">
-            <FaCalendar></FaCalendar>
+            <FaCalendar style={{ marginRight: '8px' }} />
             <a href="#" style={{ color: '#b52828', fontSize: '15px' }}>
               View Calendar
             </a>
@@ -98,7 +104,7 @@ const CourseStatusSection = () => {
 
       <ul style={{ listStyle: 'none' }}>
         <li>
-          <FaCalendar></FaCalendar>
+          <FaCalendar style={{ marginRight: '8px' }} />
           <a href="#" style={{ color: '#b52828' }}>
             Lecture
           </a>
@@ -117,7 +123,7 @@ const CourseStatusSection = () => {
           </p>
         </li>
         <li>
-          <FaCalendar></FaCalendar>
+          <FaCalendar style={{ marginRight: '8px' }} />
           <a href="#" style={{ color: '#b52828' }}>
             CS 5610 06 SP23 Lecture
           </a>
@@ -136,7 +142,7 @@ const CourseStatusSection = () => {
           </p>
         </li>
         <li>
-          <FaCalendar style={{ marginRight: '5px' }}></FaCalendar>
+          <FaCalendar style={{ marginRight: '8px' }} />
           <a href="#" style={{ color: '#b52828' }}>
             CS 5610 Web Development Lecture
           </a>

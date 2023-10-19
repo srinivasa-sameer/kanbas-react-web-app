@@ -11,16 +11,18 @@
   margin-bottom: 6px;
   margin-top: 6px;
 }
-.wd_course_navigation li.wd_active {
-  border-left: 2px solid #2d3b45;
-  font-weight: bold;
-  padding-left: 4px;
-}
-.wd_course_navigation li.wd_active a {
-  color: #2d3b45;
-}
 
 .wd_course_navigation a {
   color: #b52828;
   text-decoration: none;
+}
+
+.active {
+  border-left: 2px solid #2d3b45;
+  font-weight: bold;
+  padding-left: 4px;
+}
+
+.activeLink {
+  color: #2d3b45;
 }

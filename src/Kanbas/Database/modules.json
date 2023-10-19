@@ -1,8 +1,19 @@
 [
   {
-    "_id": "M01",
-    "mainHeading": "Week 0 - Intro",
-    "subHeading": "LEARNING OBJECTIVES",
-    "moduleName": "Introduction to the Course"
+    "_id": "CS4550",
+    "name": "CS4550 01 FA23",
+    "description": "CS4550.12631.202410",
+    "course": "CS4550",
+    "lessons": [
+      {
+        "name": "Introduction to the Course"
+      },
+      {
+        "name": "Learn what is Web Development"
+      },
+      {
+        "name": "Creating a development environment"
+      }
+    ]
   }
 ]
