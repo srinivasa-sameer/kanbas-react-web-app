@@ -1,17 +1,14 @@
 import styles from './index.module.css';
 import db from '../Database';
-import KanbasNavigation from '../KanbasNavigation';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { FaFilePen } from 'react-icons/fa6';
+import { Link } from 'react-router-dom';
 
 function Dashboard() {
   const courses = db.courses;
   return (
     <div className="d-flex flex-row">
-      <div>
-        <KanbasNavigation />
-      </div>
       <div className={styles.main_content}>
         <h1>Dashboard</h1>
         <hr />
@@ -32,9 +29,12 @@ function Dashboard() {
                       textOverflow: 'ellipsis',
                       overflow: 'hidden',
                       whiteSpace: 'nowrap',
+                      fontWeight: 'bold',
                     }}
                   >
-                    {course.name}
+                    <Link to={`/Kanbas/Courses/${course._id}`}>
+                      {course.name}
+                    </Link>
                   </Card.Text>
                   <Card.Text>{course.description}</Card.Text>
                   <Button style={{ background: 'white', border: 'white' }}>

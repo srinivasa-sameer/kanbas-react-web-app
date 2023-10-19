@@ -11,10 +11,27 @@ import {
 
 const KanbasNavigation = () => {
   const links = [
-    '/Kanbas/Account/Profile/',
-    '/Kanbas/Dashboard',
-    '/Kanbas/Courses',
+    'Account',
+    'Dashboard',
+    'Courses',
+    'Calendar',
+    'Inbox',
+    'History',
+    'Studio',
+    'Commons',
+    'Help',
   ];
+  const iconMap = {
+    Account: <FaUser className={styles.icon} style={{ color: 'grey' }} />,
+    Dashboard: <FaGauge className={styles.icon} />,
+    Courses: <FaBook className={styles.icon} />,
+    Calendar: <FaCalendarDays className={styles.icon} />,
+    Inbox: <FaInbox className={styles.icon} />,
+    History: <FaClock className={styles.icon} />,
+    Studio: <FaYoutube className={styles.icon} />,
+    Commons: <FaArrowRightFromBracket className={styles.icon} />,
+    Help: <FaCircleQuestion className={styles.icon} />,
+  };
 
   const { pathname } = useLocation();
 
@@ -29,60 +46,22 @@ const KanbasNavigation = () => {
           />
         </a>
       </div>
-      <li>
-        <Link to="/Kanbas/Account/Profile/" className={styles.kanbas__navLink}>
-          <FaUser className={styles.icon} style={{ color: 'white' }} />
-          Account
-        </Link>
-      </li>
-      <li className={`${pathname.includes(links) && 'active'}`}>
-        <Link to="/Kanbas/Dashboard" className={`${styles.kanbas__navLink}`}>
-          <FaGauge className={styles.icon} />
-          <span>Dashboard</span>
-        </Link>
-      </li>
-      <li>
-        <Link to="/Kanbas/Courses" className={styles.kanbas__navLink}>
-          <FaBook className={styles.icon} />
-          Courses
-        </Link>
-      </li>
-      <li>
-        <Link to="/Kanbas/Calendar" className={styles.kanbas__navLink}>
-          <FaCalendarDays className={styles.icon} />
-          Calendar
-        </Link>
-      </li>
-      <li>
-        <Link to="/Kanbas/Inbox" className={styles.kanbas__navLink}>
-          <FaInbox className={styles.icon} />
-          Inbox
-        </Link>
-      </li>
-      <li>
-        <Link to="/Kanbas/History" className={styles.kanbas__navLink}>
-          <FaClock className={styles.icon} />
-          History
-        </Link>
-      </li>
-      <li>
-        <Link to="/Kanbas/Studio" className={styles.kanbas__navLink}>
-          <FaYoutube className={styles.icon} />
-          Studio
-        </Link>
-      </li>
-      <li>
-        <Link to="/Kanbas/Commons" className={styles.kanbas__navLink}>
-          <FaArrowRightFromBracket className={styles.icon} />
-          Commons
-        </Link>
-      </li>
-      <li>
-        <Link to="/Kanbas/Help" className={styles.kanbas__navLink}>
-          <FaCircleQuestion className={styles.icon} />
-          Help
-        </Link>
-      </li>
+      {links.map((link, index) => (
+        <li className={` ${pathname.includes(link) && styles.active}`}>
+          <Link
+            key={index}
+            to={`/Kanbas/${link}`}
+            className={`${styles.kanbas__navLink}`}
+          >
+            {iconMap[link]}
+            <span
+              className={` ${pathname.includes(link) && styles.activeLink}`}
+            >
+              {link}
+            </span>
+          </Link>
+        </li>
+      ))}
     </ul>
   );
 };

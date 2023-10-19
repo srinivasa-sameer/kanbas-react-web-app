@@ -2,19 +2,7 @@ import Labs from './Labs';
 import HelloWorld from './Labs/a3/HelloWorld';
 import { HashRouter } from 'react-router-dom';
 import { Routes, Route, Navigate } from 'react-router';
-import KanbasNavigation from './Kanbas/KanbasNavigation';
-import Profile from './Kanbas/Account/Profile';
-import Calendar from './Kanbas/Calendar';
-import Commons from './Kanbas/Commons';
-import Help from './Kanbas/Help';
-import Dashboard from './Kanbas/Dashboard';
-import History from './Kanbas/History';
-import Inbox from './Kanbas/Inbox';
-import Studio from './Kanbas/Studio';
-import CoursesHome from './Kanbas/Courses/CoursesHome';
-import CoursesModules from './Kanbas/Courses/CoursesModules';
-import CoursesAssignments from './Kanbas/Courses/CoursesAssignments';
-import CourseAssignmentEditor from './Kanbas/Courses/CoursesAssignments/CourseAssignmentEditor';
+import Kanbas from './Kanbas';
 
 function App() {
   return (
@@ -24,25 +12,7 @@ function App() {
           <Route path="/" element={<Navigate to="/Labs" />} />
           <Route path="/hello" element={<HelloWorld />} />
           <Route path="/Labs/*" element={<Labs />} />
-          <Route path="/KanbasNavigation/*" element={<KanbasNavigation />} />
-          <Route path="Kanbas/Account/*" element={<Profile />} />
-          <Route path="Kanbas/Calendar" element={<Calendar />} />
-          <Route path="Kanbas/Commons" element={<Commons />} />
-          <Route path="Kanbas/Courses/" element={<CoursesHome />} />
-          <Route path="Kanbas/Courses/Modules" element={<CoursesModules />} />
-          <Route
-            path="Kanbas/Courses/Assignments"
-            element={<CoursesAssignments />}
-          />
-          <Route
-            path="Kanbas/Courses/Assignments/AssignmentEditor"
-            element={<CourseAssignmentEditor />}
-          />
-          <Route path="Kanbas/Help" element={<Help />} />
-          <Route path="Kanbas/Dashboard" element={<Dashboard />} />
-          <Route path="Kanbas/History" element={<History />} />
-          <Route path="Kanbas/Inbox" element={<Inbox />} />
-          <Route path="Kanbas/Studio" element={<Studio />} />
+          <Route path="/Kanbas/*" element={<Kanbas />} />
         </Routes>
       </div>
     </HashRouter>

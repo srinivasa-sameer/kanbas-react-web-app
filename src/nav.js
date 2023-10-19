@@ -16,7 +16,7 @@ function Nav() {
         Hello
       </Link>
       <Link
-        to="/KanbasNavigation"
+        to="/Kanbas"
         className={`nav-link ${pathname.includes('Kanbas') ? 'active' : ''}`}
       >
         Kanbas

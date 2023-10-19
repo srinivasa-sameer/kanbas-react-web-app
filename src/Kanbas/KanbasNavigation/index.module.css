@@ -14,13 +14,6 @@
   text-align: center;
 }
 
-.wd_kanbas-navigation li.wd_active {
-  background-color: white;
-}
-.wd_kanbas_navigation li.wd_active a {
-  color: #b52828;
-}
-
 .kanbas__navLink {
   color: #ffffff;
   text-decoration: none;
@@ -45,5 +38,9 @@
 }
 
 .active {
-  background: #ffffff;
+  background-color: white !important;
+}
+
+.activeLink {
+  color: #b52828;
 }
