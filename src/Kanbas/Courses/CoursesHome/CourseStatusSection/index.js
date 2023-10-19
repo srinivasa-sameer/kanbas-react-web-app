@@ -1,3 +1,19 @@
+import {
+  FaBan,
+  FaBell,
+  FaBullhorn,
+  FaCalendar,
+  FaCircleCheck,
+  FaCircleMinus,
+  FaCloudArrowUp,
+  FaCrosshairs,
+  FaFileImport,
+  FaSquarePollVertical,
+  FaXmark,
+} from 'react-icons/fa6';
+
+import styles from './index.module.css';
+
 const CourseStatusSection = () => {
   return (
     <div
@@ -7,55 +23,54 @@ const CourseStatusSection = () => {
       <h5>Course Status</h5>
 
       <button class="btn" style={{ background: '#eeeeee' }}>
-        <i class="fa-solid fa-ban" style={{ marginRight: '3px' }}></i>Unpublish
+        <FaBan style={{ marginRight: '3px' }}></FaBan>Unpublish
       </button>
       <button class="btn" style={{ background: '#82be5d' }}>
-        <i
-          class="fa-regular fa-circle-check"
+        <FaCircleCheck
           style={{
             background: 'white',
+            color: 'green',
             borderRadius: '50%',
             marginRight: '3px',
           }}
-        ></i>
+        ></FaCircleCheck>
         Published
       </button>
       <ul class="list-group status-list" style={{ marginTop: '10px' }}>
         <li class="list-group-item">
-          <i class="fa-solid fa-file-import"></i>Import Existing Content
+          <FaFileImport></FaFileImport>Import Existing Content
         </li>
         <li class="list-group-item">
-          <i class="fa-solid fa-cloud-arrow-up"></i>Import from Commons
+          <FaCloudArrowUp></FaCloudArrowUp>Import from Commons
         </li>
         <li class="list-group-item">
-          <i class="fa-solid fa-crosshairs"></i>Choose Home Page
+          <FaCrosshairs></FaCrosshairs>Choose Home Page
         </li>
         <li class="list-group-item">
-          <i class="fa fa-square-poll-vertical"></i>View Course Stream
+          <FaSquarePollVertical></FaSquarePollVertical>View Course Stream
         </li>
         <li class="list-group-item">
-          <i class="fa fa-bullhorn"></i>New Announcement
+          <FaBullhorn></FaBullhorn>New Announcement
         </li>
         <li class="list-group-item">
-          <i class="fa fa-square-poll-vertical"></i>New Analytics
+          <FaSquarePollVertical></FaSquarePollVertical>New Analytics
         </li>
         <li class="list-group-item">
-          <i class="fa-regular fa-bell"></i>View Course Notifications
+          <FaBell></FaBell>View Course Notifications
         </li>
       </ul>
       <br />
       <h5>To Do</h5>
       <hr />
       <div class="d-flex">
-        <i
-          class="fa-solid fa-circle-minus fa-2x"
+        <FaCircleMinus
           style={{
             transform: 'rotate(90deg)',
             color: '#b52828',
             marginRight: '15px',
             marginBottom: '30px',
           }}
-        ></i>
+        ></FaCircleMinus>
         <div class="text">
           <h6 style={{ color: '#b52828', marginLeft: '10px' }}>
             Grade A1 - ENV + HTML
@@ -64,14 +79,14 @@ const CourseStatusSection = () => {
             100 points Sep 18 at 11:59
           </p>
         </div>
-        <i class="fa fa-xmark" style={{ marginLeft: '100px' }}></i>
+        <FaXmark style={{ marginLeft: '100px' }}></FaXmark>
       </div>
       <br />
       <div>
         <h5>
           Coming Up
           <div class="float-end">
-            <i class="fa fa-calendar"></i>
+            <FaCalendar></FaCalendar>
             <a href="#" style={{ color: '#b52828', fontSize: '15px' }}>
               View Calendar
             </a>
@@ -83,7 +98,7 @@ const CourseStatusSection = () => {
 
       <ul style={{ listStyle: 'none' }}>
         <li>
-          <i class="fa fa-calendar"></i>
+          <FaCalendar></FaCalendar>
           <a href="#" style={{ color: '#b52828' }}>
             Lecture
           </a>
@@ -102,7 +117,7 @@ const CourseStatusSection = () => {
           </p>
         </li>
         <li>
-          <i class="fa fa-calendar"></i>
+          <FaCalendar></FaCalendar>
           <a href="#" style={{ color: '#b52828' }}>
             CS 5610 06 SP23 Lecture
           </a>
@@ -121,7 +136,7 @@ const CourseStatusSection = () => {
           </p>
         </li>
         <li>
-          <i class="fa fa-calendar"></i>
+          <FaCalendar style={{ marginRight: '5px' }}></FaCalendar>
           <a href="#" style={{ color: '#b52828' }}>
             CS 5610 Web Development Lecture
           </a>
