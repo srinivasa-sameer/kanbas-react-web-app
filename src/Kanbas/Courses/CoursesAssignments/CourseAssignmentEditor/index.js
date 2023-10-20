@@ -1,15 +1,11 @@
 import { Button } from 'react-bootstrap';
-import CourseTopNavBar from '../../CoursesHome/CourseTopNavBar';
-import CourseNavigation from '../../CourseNavigation';
 import styles from '../../../../index.css';
 
 const CourseAssignmentEditor = () => {
   return (
-    <div className="flex-grow-1">
-      <CourseTopNavBar />
+    <div className="flex-grow-1" style={{ margin: '20px 30px' }}>
       <div className={styles.wd_flex_row_container}>
         <div className="d-flex">
-          <CourseNavigation />
           <div
             className="flex-grow-1"
             style={{ marginLeft: '30px', marginRight: '30px' }}

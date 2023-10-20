@@ -29,75 +29,13 @@ const CourseNavigation = () => {
       <ul className={`d-none d-md-block ${styles.wd_course_navigation}`}>
         {links.map((link, index) => (
           <li className={`${pathname.includes(link) && styles.active}`}>
-            <Link
-              key={index}
-              to={`/Kanbas/Courses/${courseId}/${link}`}
-              className={`${pathname.includes(link) && styles.activeLink}`}
-            >
+            <Link key={index} to={`/Kanbas/Courses/${courseId}/${link}`}>
               {link}
             </Link>
           </li>
         ))}
       </ul>
     </div>
-    // <div>
-    //   <ul className={`d-none d-md-block ${styles.wd_course_navigation}`}>
-    //     <li className="wd_active">
-    //       <Link to="/Kanbas/Courses">Home</Link>
-    //     </li>
-    //     <li>
-    //       <Link to="/Kanbas/Courses/Modules">Modules</Link>
-    //     </li>
-    //     <li>
-    //       <a href="#">Piazza</a>
-    //     </li>
-    //     <li>
-    //       <a href="#">Zoom Meetings</a>
-    //     </li>
-    //     <li>
-    //       <Link to="/Kanbas/Courses/Assignments">Assignments</Link>
-    //     </li>
-    //     <li>
-    //       <a href="#">Quizzes</a>
-    //     </li>
-    //     <li>
-    //       <Link to="/Kanbas/Courses/Grades">Grades</Link>
-    //     </li>
-    //     <li>
-    //       <a href="#">People</a>
-    //     </li>
-    //     <li>
-    //       <a href="#">Panopto Video</a>
-    //     </li>
-    //     <li>
-    //       <a href="#">Discussions</a>
-    //     </li>
-    //     <li>
-    //       <a href="#">Announcements</a>
-    //     </li>
-    //     <li>
-    //       <a href="#">Pages</a>
-    //     </li>
-    //     <li>
-    //       <a href="#">Files</a>
-    //     </li>
-    //     <li>
-    //       <a href="#">Rubrics</a>
-    //     </li>
-    //     <li>
-    //       <a href="#">Outcomes</a>
-    //     </li>
-    //     <li>
-    //       <a href="#">Collaborations</a>
-    //     </li>
-    //     <li>
-    //       <a href="#">Syllabus</a>
-    //     </li>
-    //     <li>
-    //       <Link to="/Kanbas/Courses/Settings">Settings</Link>
-    //     </li>
-    //   </ul>
-    // </div>
   );
 };
 
