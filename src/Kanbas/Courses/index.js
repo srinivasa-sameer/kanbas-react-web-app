@@ -22,11 +22,6 @@ function Courses() {
   const [empty, kanbas, courses, id, screen] = pathname.split('/');
   const course = db.courses.find((course) => course._id === courseId);
 
-  const separatorStyle = {
-    color: 'gray',
-    margin: '0 5px',
-  };
-
   return (
     <div>
       <div className="navigation-bar" style={{ marginTop: '10px' }}>
@@ -47,7 +42,7 @@ function Courses() {
                 {course.name}
               </Link>
             </li>
-            <span style={separatorStyle}> &gt; </span>
+            <span style={{ color: 'grey', margin: '0 5px' }}> &gt; </span>
             <li class="breadcrumb-item active" aria-current="page">
               <Link to={pathname} style={{ color: 'black' }}>
                 {screen}

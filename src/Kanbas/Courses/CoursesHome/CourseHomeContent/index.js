@@ -24,10 +24,16 @@ const CourseHomeContent = () => {
   return (
     <div class="flex-grow-1" style={{ margin: '20px 30px' }}>
       <div class="d-flex float-end main-content-control">
-        <button class="btn" style={{ background: '#eeeeee' }}>
+        <button
+          class="btn"
+          style={{ background: '#eeeeee', marginRight: '5px' }}
+        >
           Collapse All
         </button>
-        <button class="btn" style={{ background: '#eeeeee' }}>
+        <button
+          class="btn"
+          style={{ background: '#eeeeee', marginRight: '5px' }}
+        >
           View Progress
         </button>
 
@@ -37,6 +43,7 @@ const CourseHomeContent = () => {
               background: '#eeeeee',
               color: 'black',
               borderStyle: 'none',
+              marginRight: '5px',
             }}
             id="dropdown-basic"
           >
@@ -58,7 +65,7 @@ const CourseHomeContent = () => {
           </Dropdown.Menu>
         </Dropdown>
 
-        <button class="btn btn-danger">
+        <button class="btn btn-danger" style={{ marginRight: '5px' }}>
           <FaPlus style={{ marginRight: '3px' }}></FaPlus>Module
         </button>
         <button class="btn" style={{ background: '#eeeeee', height: '38px' }}>

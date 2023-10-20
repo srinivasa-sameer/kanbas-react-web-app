@@ -1,7 +1,20 @@
 import { Button } from 'react-bootstrap';
 import styles from '../../../../index.css';
+import db from '../../../Database';
+import { FaCircleCheck, FaEllipsisVertical } from 'react-icons/fa6';
+import { useNavigate, useParams } from 'react-router';
+import { Link } from 'react-router-dom';
 
 const CourseAssignmentEditor = () => {
+  const { assignmentId, courseId } = useParams();
+  const assignment = db.assignments.find(
+    (assignment) => assignment._id === assignmentId
+  );
+
+  const navigate = useNavigate();
+  const handleSave = () => {
+    navigate(`/Kanbas/Courses/${courseId}/Assignments`);
+  };
   return (
     <div className="flex-grow-1" style={{ margin: '20px 30px' }}>
       <div className={styles.wd_flex_row_container}>
@@ -21,17 +34,11 @@ const CourseAssignmentEditor = () => {
                     color: 'green',
                   }}
                 >
-                  <i
-                    className="fa-solid fa-circle-check"
-                    style={{ marginRight: '3px' }}
-                  ></i>
+                  <FaCircleCheck style={{ marginRight: '3px' }} />
                   Published
                 </p>
-                <Button
-                  className="btn"
-                  style={{ background: '#eeeeee', height: '38px' }}
-                >
-                  <i className="fa-solid fa-ellipsis-vertical"></i>
+                <Button style={{ background: '#eeeeee', height: '38px' }}>
+                  <FaEllipsisVertical style={{ color: 'black' }} />
                 </Button>
               </div>
             </div>
@@ -40,13 +47,12 @@ const CourseAssignmentEditor = () => {
               <input
                 type="text"
                 className="form-control"
-                value="A1 - ENV + HTML"
+                value={assignment.title}
               />
             </div>
             <div className="mb-3">
               <textarea className="form-control" rows="3">
-                This assignment describes how to install the development
-                environment for creating and developing the web applications.
+                {assignment.description}
               </textarea>
             </div>
             <div className="container">
@@ -256,10 +262,17 @@ const CourseAssignmentEditor = () => {
                   </div>
                 </div>
                 <div className="col-6 float-end">
-                  <button className="btn" style={{ background: '#eeeeee' }}>
-                    Cancel
+                  <button className="btn">
+                    <Link
+                      to={`/Kanbas/Courses/${courseId}/Assignments`}
+                      className="btn btn-secondary"
+                    >
+                      Cancel
+                    </Link>
                   </button>
-                  <button className="btn btn-danger">Save</button>
+                  <button className="btn btn-danger" onClick={handleSave}>
+                    Save
+                  </button>
                 </div>
               </div>
               <br />

@@ -9,11 +9,7 @@ import {
   FaEllipsisVertical,
   FaPlus,
 } from 'react-icons/fa6';
-import {
-  faCheckCircle,
-  faEllipsisV,
-  faGripVertical,
-} from '@fortawesome/free-solid-svg-icons';
+import { faGripVertical } from '@fortawesome/free-solid-svg-icons';
 
 const CourseAssignmentContent = () => {
   const { courseId } = useParams();

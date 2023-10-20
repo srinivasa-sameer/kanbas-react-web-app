@@ -22,3 +22,7 @@
   font-weight: bold;
   padding-left: 4px;
 }
+
+.active a {
+  color: black;
+}
