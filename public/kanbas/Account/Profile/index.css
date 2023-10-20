@@ -1,0 +1,54 @@
+.wd-account-navigation {
+  background-color: white;
+  list-style: none;
+  padding: 0px;
+  width: 190px;
+  margin: 0px;
+  margin-left: 20px;
+}
+.wd-account-navigation li {
+  padding: 8px 0 8px 6px;
+  margin-bottom: 6px;
+  margin-top: 6px;
+}
+.wd-account-navigation li.wd-active {
+  border-left: 2px solid #2d3b45;
+  font-weight: bold;
+  padding-left: 4px;
+}
+.wd-account-navigation li.wd-active a {
+  color: #2d3b45;
+}
+
+.wd-account-navigation a {
+  color: #b52828;
+  text-decoration: none;
+}
+
+.profile-header {
+  margin: 15px 20px;
+}
+
+.profile-picture {
+  margin-left: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.profile-info {
+  margin-left: 3rem;
+}
+
+.edit-button {
+  display: block;
+  margin-left: 600px;
+  margin-right: 0;
+}
+
+.fa-pencil {
+  transform: rotate(270deg);
+  margin-right: 5px;
+}
+
+a:link {
+  text-decoration: none !important;
+}
