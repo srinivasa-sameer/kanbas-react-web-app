@@ -9,10 +9,20 @@ import {
   faEllipsisV,
   faGripVertical,
 } from '@fortawesome/free-solid-svg-icons';
+import { useSelector, useDispatch } from 'react-redux';
+import {
+  addModule,
+  deleteModule,
+  updateModule,
+  setModule,
+} from './modulesReducer';
 
 const CoursesModules = () => {
+  const modules = useSelector((state) => state.modulesReducer.modules);
+  const module = useSelector((state) => state.modulesReducer.module);
+  const dispatch = useDispatch();
   const { courseId } = useParams();
-  const modules = db.modules;
+
   const [expandedModules, setExpandedModules] = useState({});
 
   const toggleModule = (index) => {
@@ -21,6 +31,30 @@ const CoursesModules = () => {
       [index]: !prevState[index],
     }));
   };
+
+  // const addModule = (module) => {
+  //   setModules([
+  //     { ...module, _id: new Date().getTime().toString() },
+  //     ...modules,
+  //   ]);
+  // };
+
+  // const deleteModule = (moduleId) => {
+  //   setModules(modules.filter((module) => module._id !== moduleId));
+  // };
+
+  // const updateModule = () => {
+  //   setModules(
+  //     modules.map((m) => {
+  //       if (m._id === module._id) {
+  //         return module;
+  //       } else {
+  //         return m;
+  //       }
+  //     })
+  //   );
+  // };
+
   return (
     <div class="flex-grow-1" style={{ margin: '20px 30px' }}>
       <div class="d-flex float-end main-content-control">
@@ -68,6 +102,33 @@ const CoursesModules = () => {
       <br />
       <hr />
       <ul className="list-group module-list">
+        <li className="list-group-item">
+          <button
+            className="btn btn-success"
+            onClick={() => dispatch(addModule({ ...module, course: courseId }))}
+          >
+            Add
+          </button>
+          <button
+            className="btn btn-primary"
+            onClick={() => dispatch(updateModule(module))}
+          >
+            Add
+          </button>
+          <input
+            value={module.name}
+            onChange={(e) =>
+              dispatch(setModule({ ...module, name: e.target.value }))
+            }
+          />
+          <textarea
+            value={module.description}
+            onChange={(e) =>
+              dispatch(setModule({ ...module, description: e.target.value }))
+            }
+          />
+        </li>
+
         {modules
           .filter((module) => module.course === courseId)
           .map((module, index) => (
@@ -76,6 +137,20 @@ const CoursesModules = () => {
                 className="list-group-item list-group-item-secondary"
                 onClick={() => toggleModule(index)}
               >
+                <button
+                  className="btn btn-primary"
+                  onClick={() => dispatch(setModule(module))}
+                >
+                  Edit
+                </button>
+
+                <button
+                  onClick={() => dispatch(deleteModule(module._id))}
+                  className="btn btn-danger"
+                >
+                  Delete
+                </button>
+
                 <div className="flex-container">
                   <FontAwesomeIcon
                     icon={faGripVertical}

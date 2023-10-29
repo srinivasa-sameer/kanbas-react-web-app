@@ -7,7 +7,6 @@ import {
   useLocation,
   Link,
 } from 'react-router-dom';
-import db from '../Database';
 import CourseNavigation from './CourseNavigation';
 import CoursesModules from './CoursesModules';
 import CoursesAssignments from './CoursesAssignments';
@@ -16,11 +15,11 @@ import CoursesHome from './CoursesHome';
 import { FaBars } from 'react-icons/fa6';
 import styles from '../../index.css';
 
-function Courses() {
+function Courses({ courses }) {
   const { courseId } = useParams();
   const { pathname } = useLocation();
-  const [empty, kanbas, courses, id, screen] = pathname.split('/');
-  const course = db.courses.find((course) => course._id === courseId);
+  // const [empty, kanbas, courses, id, screen] = pathname.split('/');
+  const course = courses.find((course) => course._id === courseId);
 
   return (
     <div>
@@ -43,11 +42,11 @@ function Courses() {
               </Link>
             </li>
             <span style={{ color: 'grey', margin: '0 5px' }}> &gt; </span>
-            <li class="breadcrumb-item active" aria-current="page">
+            {/* <li class="breadcrumb-item active" aria-current="page">
               <Link to={pathname} style={{ color: 'black' }}>
                 {screen}
               </Link>
-            </li>
+            </li> */}
           </ol>
         </nav>
         <hr style={{ marginLeft: '20px', marginRight: '20px' }} />
