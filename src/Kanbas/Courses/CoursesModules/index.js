@@ -1,13 +1,7 @@
 import { Dropdown } from 'react-bootstrap';
 import { FaCircleCheck, FaEllipsisVertical, FaPlus } from 'react-icons/fa6';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useParams } from 'react-router';
-import React, { useState } from 'react';
-import {
-  faCheckCircle,
-  faEllipsisV,
-  faGripVertical,
-} from '@fortawesome/free-solid-svg-icons';
+import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   addModule,
