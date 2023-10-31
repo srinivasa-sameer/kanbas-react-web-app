@@ -66,7 +66,7 @@ function Kanbas() {
             />
             <Route
               path="Courses/:courseId/*"
-              element={<Courses listOfCourses={courses} />}
+              element={<Courses courses={courses} />}
             />
             <Route path="Calendar" element={<Calendar />} />
             <Route path="Commons" element={<Commons />} />
