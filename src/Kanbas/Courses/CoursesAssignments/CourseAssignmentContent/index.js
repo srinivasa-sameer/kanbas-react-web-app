@@ -1,21 +1,11 @@
 import { Link, Navigate, useParams } from 'react-router-dom';
 import '../../../../index.css';
 import './index.module.css';
-import db from '../../../Database';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  FaBook,
-  FaCircleCheck,
-  FaEllipsisVertical,
-  FaPlus,
-} from 'react-icons/fa6';
+import { FaBook, FaEllipsisVertical, FaPlus } from 'react-icons/fa6';
 import { faGripVertical } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch, useSelector } from 'react-redux';
-import {
-  deleteAssignment,
-  updateAssignment,
-  setAssignment,
-} from '../assignmentsReducer';
+import { deleteAssignment } from '../assignmentsReducer';
 
 const CourseAssignmentContent = () => {
   const { courseId } = useParams();
@@ -23,14 +13,7 @@ const CourseAssignmentContent = () => {
   const assignments = useSelector(
     (state) => state.assignmentsReducer.assignments
   );
-  const assignment = useSelector(
-    (state) => state.assignmentsReducer.assignment
-  );
   const dispatch = useDispatch();
-
-  const navigateToEditor = () => {
-    Navigate(`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`);
-  };
 
   return (
     <div className="flex-grow-1" style={{ margin: '30px' }}>
