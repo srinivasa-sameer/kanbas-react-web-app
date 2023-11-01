@@ -119,7 +119,14 @@ function Dashboard({
             className={`d-flex flex-row flex-wrap justify-content-around ${styles.cardContainer}`}
           >
             {courses.map((course) => (
-              <Card style={{ width: '270px' }} key={course._id}>
+              <Card
+                style={{
+                  width: '270px',
+                  marginBottom: '30px',
+                  marginRight: 'auto',
+                }}
+                key={course._id}
+              >
                 <Card.Img variant="top" src={`${course.image}`} />
                 <Card.Body>
                   <Card.Text

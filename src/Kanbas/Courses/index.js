@@ -26,27 +26,31 @@ function Courses({ courses }) {
       <div className="navigation-bar" style={{ marginTop: '10px' }}>
         <nav className={`d-none d-md-block ${styles.wd_breadcrumb}`}>
           <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-              <FaBars
-                style={{
-                  color: '#b52828',
-                  marginRight: '10px',
-                  marginLeft: '20px',
-                }}
-              ></FaBars>
-              <Link
-                to={`/Kanbas/Courses/${courseId}`}
-                style={{ color: '#b52828' }}
-              >
-                {course.name}
-              </Link>
-            </li>
+            {course?.name && (
+              <li class="breadcrumb-item">
+                <FaBars
+                  style={{
+                    color: '#b52828',
+                    marginRight: '10px',
+                    marginLeft: '20px',
+                  }}
+                ></FaBars>
+                <Link
+                  to={`/Kanbas/Courses/${courseId}`}
+                  style={{ color: '#b52828' }}
+                >
+                  {course.name}
+                </Link>
+              </li>
+            )}
             <span style={{ color: 'grey', margin: '0 5px' }}> &gt; </span>
-            <li class="breadcrumb-item active" aria-current="page">
-              <Link to={pathname} style={{ color: 'black' }}>
-                {screen}
-              </Link>
-            </li>
+            {screen && (
+              <li class="breadcrumb-item active" aria-current="page">
+                <Link to={pathname} style={{ color: 'black' }}>
+                  {screen}
+                </Link>
+              </li>
+            )}
           </ol>
         </nav>
         <hr style={{ marginLeft: '20px', marginRight: '20px' }} />
