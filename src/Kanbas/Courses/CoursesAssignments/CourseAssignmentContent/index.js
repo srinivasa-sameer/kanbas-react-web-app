@@ -13,6 +13,7 @@ const CourseAssignmentContent = () => {
   const assignments = useSelector(
     (state) => state.assignmentsReducer.assignments
   );
+  const temp_id = Math.random();
   const dispatch = useDispatch();
 
   return (
@@ -31,10 +32,12 @@ const CourseAssignmentContent = () => {
             <FaPlus style={{ marginRight: '3px' }} />
             Group
           </button>
-          <button className="btn btn-danger">
-            <FaPlus style={{ marginRight: '3px' }} />
-            Assignment
-          </button>
+          <Link to={`/Kanbas/Courses/${courseId}/Assignments/${temp_id}`}>
+            <button className="btn btn-danger">
+              <FaPlus style={{ marginRight: '3px' }} />
+              Assignment
+            </button>
+          </Link>
           <button
             className="btn"
             style={{ background: '#eeeeee', height: '38px' }}
