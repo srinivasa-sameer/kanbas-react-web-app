@@ -1,22 +1,21 @@
-import { Link, useParams } from 'react-router-dom';
+import { Link, Navigate, useParams } from 'react-router-dom';
 import '../../../../index.css';
 import './index.module.css';
-import db from '../../../Database';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-  FaBook,
-  FaCircleCheck,
-  FaEllipsisVertical,
-  FaPlus,
-} from 'react-icons/fa6';
+import { FaBook, FaEllipsisVertical, FaPlus } from 'react-icons/fa6';
 import { faGripVertical } from '@fortawesome/free-solid-svg-icons';
+import { useDispatch, useSelector } from 'react-redux';
+import { deleteAssignment } from '../assignmentsReducer';
 
 const CourseAssignmentContent = () => {
   const { courseId } = useParams();
-  const assignments = db.assignments;
-  const courseAssignments = assignments.filter(
-    (assignment) => assignment.course === courseId
+
+  const assignments = useSelector(
+    (state) => state.assignmentsReducer.assignments
   );
+  const temp_id = Math.random();
+  const dispatch = useDispatch();
+
   return (
     <div className="flex-grow-1" style={{ margin: '30px' }}>
       <div className="d-flex flex-row">
@@ -33,10 +32,12 @@ const CourseAssignmentContent = () => {
             <FaPlus style={{ marginRight: '3px' }} />
             Group
           </button>
-          <button className="btn btn-danger">
-            <FaPlus style={{ marginRight: '3px' }} />
-            Module
-          </button>
+          <Link to={`/Kanbas/Courses/${courseId}/Assignments/${temp_id}`}>
+            <button className="btn btn-danger">
+              <FaPlus style={{ marginRight: '3px' }} />
+              Assignment
+            </button>
+          </Link>
           <button
             className="btn"
             style={{ background: '#eeeeee', height: '38px' }}
@@ -71,14 +72,16 @@ const CourseAssignmentContent = () => {
           className="list-group"
           style={{ borderRadius: '0', borderLeft: '5px solid green' }}
         >
-          {courseAssignments.map((assignment) => (
+          {assignments.map((assignment) => (
             <li className="list-group-item" key={assignment._id}>
               <div className="flex-container">
                 <div className="float-end">
-                  <FaCircleCheck
-                    style={{ color: 'green', marginRight: '10px' }}
-                  />
-                  <FaEllipsisVertical />
+                  <button
+                    className="btn btn-danger"
+                    onClick={() => dispatch(deleteAssignment(assignment._id))}
+                  >
+                    Delete
+                  </button>
                 </div>
                 <FontAwesomeIcon
                   icon={faGripVertical}
