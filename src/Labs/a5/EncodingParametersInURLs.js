@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+
 function EncodingParametersInURLs() {
   const [a, setA] = useState(34);
   const [b, setB] = useState(23);
   const [welcome, setWelcome] = useState('');
+
   const fetchWelcome = async () => {
     const response = await axios.get('http://localhost:4000/a5/welcome');
     setWelcome(response.data);
@@ -14,6 +16,7 @@ function EncodingParametersInURLs() {
     const response = await axios.get(`http://localhost:4000/a5/add/${a}/${b}`);
     setResult(response.data);
   };
+
   const fetchSubtraction = async (a, b) => {
     const response = await axios.get(
       `http://localhost:4000/a5/subtract/${a}/${b}`
@@ -23,8 +26,6 @@ function EncodingParametersInURLs() {
 
   useEffect(() => {
     fetchWelcome();
-    fetchSum();
-    fetchSubtraction();
   }, []);
 
   return (
@@ -36,19 +37,19 @@ function EncodingParametersInURLs() {
       <h4>Calculator</h4>
       <input
         onChange={(e) => setA(e.target.value)}
-        className="form-control"
+        className="form-control mb-2 w-25"
         type="number"
         value={a}
       />
       <input
         onChange={(e) => setB(e.target.value)}
-        className="form-control"
+        className="form-control w-25"
         type="number"
         value={b}
       />
       <input
         value={result}
-        className="form-control mb-2"
+        className="form-control mb-2 mt-2"
         type="number"
         readOnly
       />
@@ -65,10 +66,10 @@ function EncodingParametersInURLs() {
       >
         Fetch Substraction of {a} - {b}
       </button>
-      <h3>Path Parameters</h3>
+      <h3 className={'mt-2'}>Path Parameters</h3>
       <a
         href={`http://localhost:4000/a5/add/${a}/${b}`}
-        className="btn btn-primary"
+        className="btn btn-primary me-2"
       >
         Add {a} + {b}
       </a>
@@ -76,14 +77,12 @@ function EncodingParametersInURLs() {
         href={`http://localhost:4000/a5/subtract/${a}/${b}`}
         className="btn btn-danger"
       >
-        Substract {a} - {b}
+        Subtract {a} - {b}
       </a>
-
-      <hr />
-      <h3>Query Parameters</h3>
+      <h3 className={'mt-2'}>Query Parameters</h3>
       <a
         href={`http://localhost:4000/a5/calculator?operation=add&a=${a}&b=${b}`}
-        className="btn btn-primary"
+        className="btn btn-primary me-2"
       >
         Add {a} + {b}
       </a>
@@ -91,9 +90,10 @@ function EncodingParametersInURLs() {
         href={`http://localhost:4000/a5/calculator?operation=subtract&a=${a}&b=${b}`}
         className="btn btn-danger"
       >
-        Substract {a} - {b}
+        Subtract {a} - {b}
       </a>
     </div>
   );
 }
+
 export default EncodingParametersInURLs;
