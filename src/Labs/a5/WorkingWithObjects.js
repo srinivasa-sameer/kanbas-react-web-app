@@ -61,9 +61,7 @@ function WorkingWithObjects() {
         type="number"
       />
 
-      <label for="checked" style={{ marginRight: '5px' }}>
-        Assignment Completed?
-      </label>
+      <label style={{ marginRight: '5px' }}>Assignment Completed?</label>
       <a
         href={`${URL}/completed/${assignment.completed}`}
         className="btn btn-primary me-2 float-end"
@@ -77,7 +75,6 @@ function WorkingWithObjects() {
         value={assignment.completed}
         className="form-check-input mb-2"
         type="checkbox"
-        id="checked"
       />
     </div>
   );
