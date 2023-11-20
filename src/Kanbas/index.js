@@ -10,7 +10,6 @@ import Inbox from './Inbox';
 import Studio from './Studio';
 import Courses from './Courses';
 import { useEffect, useState } from 'react';
-import db from './Database';
 import store from './store';
 import { Provider } from 'react-redux';
 import axios from 'axios';
