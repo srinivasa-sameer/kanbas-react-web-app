@@ -1,20 +1,49 @@
 import { Dropdown } from 'react-bootstrap';
 import { FaCircleCheck, FaEllipsisVertical, FaPlus } from 'react-icons/fa6';
 import { useParams } from 'react-router';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   addModule,
   deleteModule,
   updateModule,
   setModule,
+  setModules,
 } from './modulesReducer';
+import {
+  findModulesForCourse,
+  createModule,
+  removeModule,
+  editModule,
+} from './client';
 
 const CoursesModules = () => {
   const modules = useSelector((state) => state.modulesReducer.modules);
   const module = useSelector((state) => state.modulesReducer.module);
   const dispatch = useDispatch();
   const { courseId } = useParams();
+  useEffect(() => {
+    findModulesForCourse(courseId).then((modules) =>
+      dispatch(setModules(modules))
+    );
+  }, [courseId]);
+
+  const handleAddModule = () => {
+    createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+
+  const handleDeleteModule = (moduleId) => {
+    removeModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
+  const handleUpdateModule = async () => {
+    const status = await editModule(module);
+    dispatch(updateModule(module));
+  };
 
   return (
     <div class="flex-grow-1" style={{ margin: '20px 30px' }}>
@@ -91,14 +120,14 @@ const CoursesModules = () => {
       <div style={{ marginTop: '5px' }}>
         <button
           className="btn btn-success"
-          onClick={() => dispatch(addModule({ ...module, course: courseId }))}
+          onClick={handleAddModule}
           style={{ marginRight: '5px' }}
         >
           Add
         </button>
         <button
           className="btn btn-primary"
-          onClick={() => dispatch(updateModule(module))}
+          onClick={handleUpdateModule(module)}
         >
           Update
         </button>
