@@ -10,7 +10,6 @@ function WorkingWithObjects() {
     completed: false,
     score: 0,
   });
-  console.log(assignment);
   const URL = 'http://localhost:4000/a5/assignment';
   const fetchAssignment = async () => {
     const response = await axios.get(`${URL}`);
