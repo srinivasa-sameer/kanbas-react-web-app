@@ -32,9 +32,6 @@ function Account() {
   return (
     <div className="w-50 container">
       <h1>Account</h1>
-      <button className="btn btn-primary" onClick={save}>
-        Save
-      </button>
       <Link to="/Kanbas/users" className="btn btn-warning m-2">
         Users
       </Link>
@@ -44,32 +41,40 @@ function Account() {
       {account && (
         <div>
           <input
+            className="form-control"
             value={account.password}
             onChange={(e) =>
               setAccount({ ...account, password: e.target.value })
             }
           />
           <input
+            className="form-control"
             value={account.firstName}
             onChange={(e) =>
               setAccount({ ...account, firstName: e.target.value })
             }
           />
           <input
+            className="form-control"
             value={account.lastName}
             onChange={(e) =>
               setAccount({ ...account, lastName: e.target.value })
             }
           />
           <input
+            className="form-control"
+            type="date"
             value={account.dob}
             onChange={(e) => setAccount({ ...account, dob: e.target.value })}
           />
           <input
+            className="form-control"
+            type="text"
             value={account.email}
             onChange={(e) => setAccount({ ...account, email: e.target.value })}
           />
           <select
+            className="form-select"
             onChange={(e) => setAccount({ ...account, role: e.target.value })}
           >
             <option value="USER">User</option>
@@ -77,6 +82,10 @@ function Account() {
             <option value="FACULTY">Faculty</option>
             <option value="STUDENT">Student</option>
           </select>
+
+          <button className="btn btn-primary" onClick={save}>
+            Save
+          </button>
         </div>
       )}
     </div>
