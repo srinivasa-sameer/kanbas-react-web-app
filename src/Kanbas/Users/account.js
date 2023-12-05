@@ -45,9 +45,6 @@ function Account() {
       <Link to="/Kanbas/users" className="btn btn-warning m-2">
         Users
       </Link>
-      <button onClick={signout} className="btn btn-secondary">
-        Signout
-      </button>
       {account && (
         <div>
           <label>Password:</label>
@@ -108,6 +105,13 @@ function Account() {
             style={{ marginTop: '3px' }}
           >
             Save
+          </button>
+          <button
+            onClick={signout}
+            className="btn btn-secondary"
+            style={{ marginLeft: '3px' }}
+          >
+            Signout
           </button>
         </div>
       )}
