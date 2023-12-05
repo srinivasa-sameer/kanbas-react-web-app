@@ -42,11 +42,9 @@ function Account() {
   return (
     <div className="w-50 container">
       <h1>Account</h1>
-      {account.role === 'ADMIN' && (
-        <Link to="/Kanbas/users" className="btn btn-warning m-2">
-          Users
-        </Link>
-      )}
+      <Link to="/Kanbas/users" className="btn btn-warning m-2">
+        Users
+      </Link>
       <button onClick={signout} className="btn btn-secondary">
         Signout
       </button>
