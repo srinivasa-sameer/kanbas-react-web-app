@@ -12,7 +12,10 @@ function Account() {
   const navigate = useNavigate();
   const fetchAccount = async () => {
     const account = await client.account();
-    setAccount({ ...account, dob: account ? getDate(account.dob) : '' });
+    setAccount({
+      ...account,
+      dob: account ? getDate(new Date(account.dob)) : '',
+    });
   };
   useEffect(() => {
     if (id) {
