@@ -50,6 +50,7 @@ function Account() {
       </button>
       {account && (
         <div>
+          <label>Password:</label>
           <input
             className="form-control"
             value={account.password}
@@ -60,6 +61,7 @@ function Account() {
           <input
             className="form-control"
             value={account.firstName}
+            placeholder="Enter First Name"
             onChange={(e) =>
               setAccount({ ...account, firstName: e.target.value })
             }
@@ -67,10 +69,12 @@ function Account() {
           <input
             className="form-control"
             value={account.lastName}
+            placeholder="Enter Last Name"
             onChange={(e) =>
               setAccount({ ...account, lastName: e.target.value })
             }
           />
+          <label>Date of Birth</label>
           <input
             className="form-control"
             type="date"
@@ -80,6 +84,7 @@ function Account() {
           <input
             className="form-control"
             type="text"
+            placeholder="Enter Email"
             value={account.email}
             onChange={(e) => setAccount({ ...account, email: e.target.value })}
           />
