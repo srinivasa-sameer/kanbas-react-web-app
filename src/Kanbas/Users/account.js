@@ -109,7 +109,7 @@ function Account() {
           <button
             onClick={signout}
             className="btn btn-secondary"
-            style={{ marginLeft: '3px' }}
+            style={{ marginLeft: '3px', marginTop: '3px' }}
           >
             Signout
           </button>
