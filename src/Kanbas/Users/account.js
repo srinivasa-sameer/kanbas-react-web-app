@@ -12,7 +12,7 @@ function Account() {
   const navigate = useNavigate();
   const fetchAccount = async () => {
     const account = await client.account();
-    setAccount(account);
+    setAccount({ ...account, dob: account ? getDate(account.dob) : '' });
   };
   useEffect(() => {
     if (id) {
@@ -27,6 +27,13 @@ function Account() {
   const signout = async () => {
     await client.signout();
     navigate('/Kanbas/signin');
+  };
+  const getDate = (today) => {
+    const year = today.getFullYear();
+    const month = String(today.getMonth() + 1).padStart(2, '0');
+    const day = String(today.getDate()).padStart(2, '0');
+    const formattedDate = `${year}-${month}-${day}`;
+    return formattedDate;
   };
 
   return (
