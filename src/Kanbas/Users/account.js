@@ -102,7 +102,11 @@ function Account() {
             <option value="STUDENT">Student</option>
           </select>
 
-          <button className="btn btn-primary" onClick={save}>
+          <button
+            className="btn btn-primary"
+            onClick={save}
+            style={{ marginTop: '3px' }}
+          >
             Save
           </button>
         </div>
