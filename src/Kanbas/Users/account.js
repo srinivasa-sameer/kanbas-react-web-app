@@ -58,6 +58,7 @@ function Account() {
               setAccount({ ...account, password: e.target.value })
             }
           />
+          <label>First Name:</label>
           <input
             className="form-control"
             value={account.firstName}
@@ -66,6 +67,7 @@ function Account() {
               setAccount({ ...account, firstName: e.target.value })
             }
           />
+          <label>Last Name:</label>
           <input
             className="form-control"
             value={account.lastName}
@@ -81,6 +83,7 @@ function Account() {
             value={account.dob}
             onChange={(e) => setAccount({ ...account, dob: e.target.value })}
           />
+          <label>Email:</label>
           <input
             className="form-control"
             type="text"
@@ -88,6 +91,7 @@ function Account() {
             value={account.email}
             onChange={(e) => setAccount({ ...account, email: e.target.value })}
           />
+          <label>Role:</label>
           <select
             className="form-select"
             onChange={(e) => setAccount({ ...account, role: e.target.value })}
